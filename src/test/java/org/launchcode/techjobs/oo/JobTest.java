@@ -55,13 +55,19 @@ public class JobTest {
     public void testToStringContainsCorrectLabelsAndData(){
         Job job = new Job("Web Developer", new Employer("LaunchCode"), new Location("StL"), new PositionType("Back-end developer"), new CoreCompetency("Java"));
         String newLine = System.lineSeparator();
-        String result = String.format(newLine + "ID: %d" + newLine +
-                "Name: %s" + newLine +
-                "Employer: %s" + newLine +
-                "Location: %s" + newLine +
-                "Position Type: %s" + newLine +
-                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
+//        String result = String.format(newLine + "ID: %d" + newLine +
+//                "Name: %s" + newLine +
+//                "Employer: %s" + newLine +
+//                "Location: %s" + newLine +
+//                "Position Type: %s" + newLine +
+//                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
 
+        String result = String.format("\r\nID: %d\r\n" +
+                "Name: %s\r\n" +
+                "Employer: %s\r\n" +
+                "Location: %s\r\n" +
+                "Position Type: %s\r\n" +
+                "Core Competency: %s\r\n",job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
         assertEquals(result,job.toString());
     }
 
@@ -69,13 +75,19 @@ public class JobTest {
     public void testToStringHandlesEmptyField(){
         Job job = new Job("Web Developer", new Employer(""), new Location("StL"), new PositionType(""), new CoreCompetency("Java"));
         String newLine = System.lineSeparator();
-        String result = String.format(newLine + "ID: %d" + newLine +
-                "Name: %s" + newLine +
-                "Employer: %s" + newLine +
-                "Location: %s" + newLine +
-                "Position Type: %s" + newLine +
-                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
+//        String result = String.format(newLine + "ID: %d" + newLine +
+//                "Name: %s" + newLine +
+//                "Employer: %s" + newLine +
+//                "Location: %s" + newLine +
+//                "Position Type: %s" + newLine +
+//                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
 
+        String result = String.format("\r\nID: %d\r\n" +
+                "Name: %s\r\n" +
+                "Employer: %s\r\n" +
+                "Location: %s\r\n" +
+                "Position Type: %s\r\n" +
+                "Core Competency: %s\r\n",job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
         assertEquals(result,job.toString());
     }
 }
