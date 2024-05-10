@@ -48,7 +48,7 @@ public class JobTest {
 
         assertEquals(lineSeparator(),firstChar);
         assertEquals(lineSeparator(),lastChar);
-//        assertEquals("\n",lastChar);
+
     }
 
     @Test
