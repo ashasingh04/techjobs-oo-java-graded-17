@@ -42,25 +42,14 @@ public class JobTest {
     public void testToStringStartsAndEndsWithNewLine(){
         Job job = new Job("Web Developer", new Employer("LaunchCode"), new Location("StL"), new PositionType("Back-end developer"), new CoreCompetency("Java"));
         String firstChar = String.valueOf(job.toString().charAt(0));
-//        String firstChar = String.valueOf(job.toString().substring(0,2));
         String lastChar = String.valueOf(job.toString().charAt(job.toString().length()-1));
-//       String lastChar = String.valueOf(job.toString().substring(job.toString().length()-2,job.toString().length()));
-
         assertEquals("\n",firstChar);
         assertEquals("\n",lastChar);
-
     }
 
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
         Job job = new Job("Web Developer", new Employer("LaunchCode"), new Location("StL"), new PositionType("Back-end developer"), new CoreCompetency("Java"));
-        String newLine = System.lineSeparator();
-//        String result = String.format(newLine + "ID: %d" + newLine +
-//                "Name: %s" + newLine +
-//                "Employer: %s" + newLine +
-//                "Location: %s" + newLine +
-//                "Position Type: %s" + newLine +
-//                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
 
         String result = String.format("\nID: %d\n" +
                 "Name: %s\n" +
@@ -74,14 +63,7 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField(){
         Job job = new Job("Web Developer", new Employer(""), new Location("StL"), new PositionType(""), new CoreCompetency("Java"));
-        String newLine = System.lineSeparator();
-//        String result = String.format(newLine + "ID: %d" + newLine +
-//                "Name: %s" + newLine +
-//                "Employer: %s" + newLine +
-//                "Location: %s" + newLine +
-//                "Position Type: %s" + newLine +
-//                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
-
+        
         String result = String.format("\nID: %d\n" +
                 "Name: %s\n" +
                 "Employer: %s\n" +

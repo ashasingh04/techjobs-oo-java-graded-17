@@ -76,14 +76,14 @@ public class Job {
 
     @Override
     public String toString() {
-        String result = "\n";
-        result += "ID: " + id + "\n";
-        result += "Name: " + (name == null || name.isEmpty() ? "Data not available" : name) + "\n";
-        result += "Employer: " + (employer == null || employer.getValue().isEmpty() ? "Data not available" : employer.getValue()) + "\n";
-        result += "Location: " + (location == null || location.getValue().isEmpty() ? "Data not available" : location.getValue()) + "\n";
-        result += "Position Type: " + (positionType == null || positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue()) + "\n";
-        result += "Core Competency: " + (coreCompetency == null || coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue()) + "\n";
-        return result;
+        String output = "\n";
+        output += "ID: " + id + "\n";
+        output += "Name: " + (name == null || name.isEmpty() ? "Data not available" : name) + "\n";
+        output += "Employer: " + (employer == null || employer.getValue().isEmpty() ? "Data not available" : employer.getValue()) + "\n";
+        output += "Location: " + (location == null || location.getValue().isEmpty() ? "Data not available" : location.getValue()) + "\n";
+        output += "Position Type: " + (positionType == null || positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue()) + "\n";
+        output += "Core Competency: " + (coreCompetency == null || coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue()) + "\n";
+        return output;
     }
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
