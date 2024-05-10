@@ -46,34 +46,45 @@ public class Job {
         return Objects.hash(id);
     }
 
+//    @Override
+//    public String toString() {
+//        String output;
+//        String newLine = System.lineSeparator();
+//        if(name.equals("")){
+//            name = "Data not available";
+//        }
+//        if (employer.getValue().equals("") || employer.getValue() == null) {
+//            employer.setValue("Data not available");
+//        }
+//        if (location.getValue().equals("") || location.getValue() == null) {
+//            location.setValue("Data not available");
+//        }
+//        if (positionType.getValue().equals("") || positionType.getValue() == null) {
+//            positionType.setValue("Data not available");
+//        }
+//        if (coreCompetency.getValue().equals("") || coreCompetency.getValue() == null) {
+//            coreCompetency.setValue("Data not available");
+//        }
+//        output = String.format(newLine +"ID: %d" + newLine +
+//                "Name: %s" + newLine +
+//                "Employer: %s" + newLine +
+//                "Location: %s" + newLine +
+//                "Position Type: %s" + newLine +
+//                "Core Competency: %s" + newLine, id, name, employer, location, positionType, coreCompetency);
+//        return output;
+//    }
+
     @Override
     public String toString() {
-        String output;
-        String newLine = System.lineSeparator();
-        if(name.equals("")){
-            name = "Data not available";
-        }
-        if (employer.getValue().equals("") || employer.getValue() == null) {
-            employer.setValue("Data not available");
-        }
-        if (location.getValue().equals("") || location.getValue() == null) {
-            location.setValue("Data not available");
-        }
-        if (positionType.getValue().equals("") || positionType.getValue() == null) {
-            positionType.setValue("Data not available");
-        }
-        if (coreCompetency.getValue().equals("") || coreCompetency.getValue() == null) {
-            coreCompetency.setValue("Data not available");
-        }
-        output = String.format(newLine +"ID: %d" + newLine +
-                "Name: %s" + newLine +
-                "Employer: %s" + newLine +
-                "Location: %s" + newLine +
-                "Position Type: %s" + newLine +
-                "Core Competency: %s" + newLine, id, name, employer, location, positionType, coreCompetency);
-        return output;
+        String result = "\n";
+        result += "ID: " + id + "\n";
+        result += "Name: " + (name == null || name.isEmpty() ? "Data not available" : name) + "\n";
+        result += "Employer: " + (employer == null || employer.getValue().isEmpty() ? "Data not available" : employer.getValue()) + "\n";
+        result += "Location: " + (location == null || location.getValue().isEmpty() ? "Data not available" : location.getValue()) + "\n";
+        result += "Position Type: " + (positionType == null || positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue()) + "\n";
+        result += "Core Competency: " + (coreCompetency == null || coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue()) + "\n";
+        return result;
     }
-
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 

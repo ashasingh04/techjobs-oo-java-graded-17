@@ -41,13 +41,13 @@ public class JobTest {
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
         Job job = new Job("Web Developer", new Employer("LaunchCode"), new Location("StL"), new PositionType("Back-end developer"), new CoreCompetency("Java"));
-//        String firstChar = String.valueOf(job.toString().charAt(0));
-        String firstChar = String.valueOf(job.toString().substring(0,2));
-//        String lastChar = String.valueOf(job.toString().charAt(job.toString().length()-1));
-       String lastChar = String.valueOf(job.toString().substring(job.toString().length()-2,job.toString().length()));
+        String firstChar = String.valueOf(job.toString().charAt(0));
+//        String firstChar = String.valueOf(job.toString().substring(0,2));
+        String lastChar = String.valueOf(job.toString().charAt(job.toString().length()-1));
+//       String lastChar = String.valueOf(job.toString().substring(job.toString().length()-2,job.toString().length()));
 
-        assertEquals(lineSeparator(),firstChar);
-        assertEquals(lineSeparator(),lastChar);
+        assertEquals("\n",firstChar);
+        assertEquals("\n",lastChar);
 
     }
 
@@ -62,12 +62,12 @@ public class JobTest {
 //                "Position Type: %s" + newLine +
 //                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
 
-        String result = String.format("\r\nID: %d\r\n" +
-                "Name: %s\r\n" +
-                "Employer: %s\r\n" +
-                "Location: %s\r\n" +
-                "Position Type: %s\r\n" +
-                "Core Competency: %s\r\n",job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
+        String result = String.format("\nID: %d\n" +
+                "Name: %s\n" +
+                "Employer: %s\n" +
+                "Location: %s\n" +
+                "Position Type: %s\n" +
+                "Core Competency: %s\n",job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
         assertEquals(result,job.toString());
     }
 
@@ -82,12 +82,12 @@ public class JobTest {
 //                "Position Type: %s" + newLine +
 //                "Core Competency: %s" + newLine,job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
 
-        String result = String.format("\r\nID: %d\r\n" +
-                "Name: %s\r\n" +
-                "Employer: %s\r\n" +
-                "Location: %s\r\n" +
-                "Position Type: %s\r\n" +
-                "Core Competency: %s\r\n",job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
+        String result = String.format("\nID: %d\n" +
+                "Name: %s\n" +
+                "Employer: %s\n" +
+                "Location: %s\n" +
+                "Position Type: %s\n" +
+                "Core Competency: %s\n",job.getId(),job.getName(),job.getEmployer(),job.getLocation(),job.getPositionType(),job.getCoreCompetency());
         assertEquals(result,job.toString());
     }
 }
